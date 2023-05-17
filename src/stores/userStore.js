@@ -39,9 +39,9 @@ export const useUserStore = defineStore('userStore', () => {
             })
     }
 
-    const login = async (logUser) => {
+    const login = (logUser) => {
         logUser.password = CryptoJS.MD5(logUser.password).toString()
-        await axios.post('/login', logUser)
+        axios.post('/login', logUser)
             .then((response) => {
                 if (response.status === 200 && response.data.token) {
                     user.value = response.data.user
