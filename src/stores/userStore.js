@@ -9,16 +9,16 @@ export const useUserStore = defineStore('userStore', () => {
     const isLoggedIn = ref(JSON.parse(localStorage.getItem('isLoggedIn')) || false)
 
     // -----------------------------------------------------
-    // const test = () => {
-    //     axios.get('/test')
-    //         .then((response) => {
-    //             console.log('Config: ' + response.config)
-    //             console.log('Data: ' + response.data)
-    //         })
-    //         .catch((error) => {
-    //             console.log(error.config)
-    //         })
-    // }
+    const test = () => {
+        axios.get('/test')
+            .then((response) => {
+                console.log('Config: ' + response.config)
+                console.log('Data: ' + response.data)
+            })
+            .catch((error) => {
+                console.log(error.config)
+            })
+    }
     // -----------------------------------------------------
 
 
