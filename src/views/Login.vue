@@ -68,6 +68,14 @@ const successMessage = ref('')
 
 const login = () => {
   userStore.login(user.value)
+    .then(() => {
+      successMessage.value = 'Login successful'
+      errorMessage.value = ''
+    })
+    .catch((error) => {
+      errorMessage.value = error.response?.data?.message || 'Login failed'
+      successMessage.value = ''
+    })
 }
 </script>
 
