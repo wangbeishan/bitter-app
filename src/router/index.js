@@ -7,7 +7,6 @@ import Profile from '../components/Profile.vue'
 import UserList from '../components/UserList.vue'
 
 const router = createRouter({
-    mode: 'history',
     history: createWebHistory(),
     routes: [
         {
