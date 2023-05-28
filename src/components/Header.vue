@@ -23,7 +23,7 @@ const navigation = ref([
 const userNavigation = [
     { name: '个人资料', href: '/profile' },
     { name: '设置', href: '#' },
-    // { name: '登出', href:  },
+    { name: '登出', href: '#', onclick: logout },
 ]
 
 onMounted(() => {
@@ -126,9 +126,6 @@ onMounted(() => {
                 <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
                     {{ item.name }}
-                </DisclosureButton>
-                <DisclosureButton class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
-                    <button @click="logout">登出</button>
                 </DisclosureButton>
             </div>
         </div>
