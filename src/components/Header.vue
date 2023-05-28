@@ -23,7 +23,7 @@ const navigation = ref([
 const userNavigation = [
     { name: '个人资料', href: '/profile' },
     { name: '设置', href: '#' },
-    { name: '登出', href: '/logout' },
+    { name: '登出', href: logout },
 ]
 
 onMounted(() => {
