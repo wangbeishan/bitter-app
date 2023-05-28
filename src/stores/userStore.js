@@ -27,7 +27,7 @@ export const useUserStore = defineStore('userStore', () => {
         axios.post('/register', newUser)
             .then((response) => {
                 if (response.status === 200) {
-                    alert("注册成功，即将跳转登陆页面")
+                    alert("请打开邮箱验证你的账号")
                     //延迟执行页面跳转
                     setTimeout(() => {
                         router.push('/login')

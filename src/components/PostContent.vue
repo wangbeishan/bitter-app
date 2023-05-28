@@ -75,8 +75,6 @@ const postContent = async () => {
         content: message.value,
         avatar: userStore.user.avatar
     }
-    console.log('Test: ' + tweet)
-    console.log(tweet)
     await contentStore.postContent(tweet)
     contentStore.getContents()
     location.reload()

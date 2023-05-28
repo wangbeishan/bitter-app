@@ -3,9 +3,9 @@ import { ref, computed } from 'vue'
 import { useUserStore } from '../stores/userStore';
 
 const user = ref({
-  username: 'Beishan',
-  email: 'wangbeishan1900@gmail.com',
-  password: 'w1234567'
+  username: '',
+  email: '',
+  password: ''
 })
 
 const isInvalid = computed(() => {
